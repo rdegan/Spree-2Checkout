@@ -21,6 +21,7 @@
       <%= hidden_field_tag :ship_state, @order.ship_address.state %>
       <%= hidden_field_tag :ship_zip, @order.ship_address.zipcode %>
       <%= hidden_field_tag :ship_country, @order.ship_address.country.name %>
+	  <%= hidden_field_tag :lang, Spree::Config['default_locale'] %>
       <% if pm.preferred(:test_mode) == true %>
         <%= hidden_field_tag :demo, "Y" %>
       <% end %>
